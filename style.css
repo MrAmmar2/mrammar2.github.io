@@ -65,14 +65,15 @@ body{
   z-index:0;
 }
 
-.hero-inner{
-  position:relative;
-  z-index:2;
-  display:grid;
-  grid-template-columns: 1fr 360px;
-  gap:28px;
-  align-items:center;
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+  align-items: start;
 }
+
 
 /* hero text */
 .hero-text h1{
@@ -257,6 +258,7 @@ a{color:inherit}
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
 
 
 
