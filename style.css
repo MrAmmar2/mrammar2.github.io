@@ -184,15 +184,19 @@ a{color:inherit}
 /* ===== Loading Screen ===== */
 #loader {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: radial-gradient(circle at center, #0a0f25 0%, #000 100%);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  z-index: 9999;
+  z-index: 9999;           /* <-- This ensures it’s above everything */
   color: white;
   transition: opacity 1s ease, visibility 1s ease;
+  overflow: hidden;        /* <-- Prevents scroll while loading */
 }
 
 #loader.hidden {
@@ -253,5 +257,6 @@ a{color:inherit}
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
 
 
