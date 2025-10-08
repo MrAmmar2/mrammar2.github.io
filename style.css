@@ -303,4 +303,24 @@ a{color:inherit}
 }
 
 
+/* === Fix quick-stats overflow on small screens === */
+.quick-stats {
+  display: flex;
+  flex-wrap: wrap;         /* ✅ allows items to move to next line */
+  justify-content: center; /* ✅ center them on mobile */
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+}
+
+.quick-stats li {
+  background: var(--glass);
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  white-space: nowrap;     /* keeps text in one line per pill */
+}
+
 
