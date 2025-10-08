@@ -48,3 +48,12 @@ document.querySelectorAll('a[href$=".pdf"]').forEach(a=>{
   a.setAttribute('target','_blank');
   a.setAttribute('rel','noopener noreferrer');
 });
+
+// ===== Loader fade-out =====
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+  setTimeout(() => {
+    loader.classList.add("hidden");
+  }, 3200); // matches the loader bar animation duration
+});
+
