@@ -1,45 +1,243 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ammar Pauzan | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Muhammad Ammar — Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Muhammad Ammar — Computer Engineering graduate. Projects: STM32 hand posture recognition, YOLOv8 license sticker expiry detection, MATLAB leaf disease, Arduino turbidity meter, smart parking." />
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>Ammar Pauzan</h1>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="logo" href="#hero">Ammar Pauzan</a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a Computer Engineering student passionate about embedded systems, AI on STM32, and full-stack development.</p>
-  </section>
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1 class="glow">Muhammad Ammar <span class="muted">— Computer Engineering</span></h1>
+          <p class="lead">Embedded systems • STM32 AI • Computer vision • Full-stack basics</p>
+          <div class="hero-ctas">
+            <a class="btn primary" href="#projects">See Projects</a>
+            <a class="btn outline" href="#resume">Download Resume</a>
+          </div>
+        </div>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Real-Time Hand Posture Recognition</h3>
-      <p>Developed an AI-powered STM32 system using Time-of-Flight sensors for real-time gesture detection.</p>
-    </div>
-  </section>
+        <div class="hero-card" aria-hidden="true">
+          <!-- floating card with quick info -->
+          <div class="profile-pulse"></div>
+          <div class="card-content">
+            <h3>Hi — I'm Ammar</h3>
+            <p>Final year Computer Engineering student at UTeM. I build smart embedded systems and computer vision projects.</p>
+            <ul class="quick-stats">
+              <li><strong>STM32</strong><span>Embedded AI</span></li>
+              <li><strong>YOLOv8</strong><span>Computer Vision</span></li>
+              <li><strong>Arduino</strong><span>Prototyping</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:ammar@example.com">ammarpauzan@gmail.com</a></p>
-    <p>LinkedIn: <a href="#">linkedin.com/in/ammarpauzan</a></p>
-  </section>
+      <!-- decorative blobs -->
+      <div class="blobs">
+        <div class="blob b1"></div>
+        <div class="blob b2"></div>
+        <div class="blob b3"></div>
+      </div>
+    </section>
 
-  <footer>
-    <p>© 2025 Ammar Pauzan</p>
-  </footer>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid reveal">
+          <div class="about-left">
+            <p>
+              Motivated and detail-oriented Computer Engineering graduate from Universiti Teknikal Malaysia Melaka (UTeM), with hands-on experience in IT support, microcontroller systems, and software development. Proactive team player who enjoys building embedded AI systems and computer vision solutions.
+            </p>
+            <ul class="contact-list">
+              <li><strong>Location:</strong> Kajang, Selangor, Malaysia</li>
+              <li><strong>Email:</strong> <a href="mailto:ammarpauzan@gmail.com">ammarpauzan@gmail.com</a></li>
+              <li><strong>Phone:</strong> +60-1139063634</li>
+              <li><strong>LinkedIn:</strong> <a href="#" id="linkedin-link">(update your LinkedIn URL)</a></li>
+            </ul>
+
+            <div class="skill-pill-wrap">
+              <span class="skill">STM32</span>
+              <span class="skill">Time-of-Flight</span>
+              <span class="skill">YOLOv8</span>
+              <span class="skill">MATLAB</span>
+              <span class="skill">Python</span>
+              <span class="skill">C++</span>
+            </div>
+          </div>
+
+          <div class="about-right">
+            <div class="card resume-card">
+              <h3>Education</h3>
+              <p><strong>UTeM</strong> — B. Computer Engineering (Hons)<br/>Expected Oct 2025 • CGPA: 3.4</p>
+              <hr/>
+              <h3>Experience</h3>
+              <p><strong>Protégé Technical Assistant</strong> — Iburuj Network SDN BHD (Aug 2025 – Present)</p>
+              <p><strong>IT Support Intern</strong> — Serasi Solutions / MAFI (Jul–Sep 2024)</p>
+              <div class="download-row">
+                <a class="btn primary small" href="assets/Resume_MUHAMMAD_AMMAR_2025.pdf" download>Download Resume (PDF)</a>
+                <a class="btn outline small" href="#contact">Contact Me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-lead">Selected projects — click a card to see notes. Replace links with your GitHub or live demos.</p>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card reveal" tabindex="0">
+            <div class="project-media" style="background-image: linear-gradient(135deg, rgba(255,140,0,0.15), rgba(255,0,128,0.08));">
+              <div class="tag">FYP 2025</div>
+            </div>
+            <div class="project-body">
+              <h3>Real-time Hand Posture Recognition</h3>
+              <p>STM32 AI Model Zoo + Time-of-Flight sensor — real-time detection of 8 gesture classes. Awarded at INOTEK 2025.</p>
+              <div class="project-meta">
+                <span>STM32</span>
+                <span>AI</span>
+                <span>ToF</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="btn small">View Code</a>
+                <a href="#" class="btn small outline">Read Paper</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card reveal" tabindex="0">
+            <div class="project-media" style="background-image: linear-gradient(135deg, rgba(0,150,255,0.12), rgba(0,255,200,0.06));">
+              <div class="tag">2025</div>
+            </div>
+            <div class="project-body">
+              <h3>License Sticker Expired Detection (YOLOv8)</h3>
+              <p>Computer vision model trained for detecting expiry date on vehicle license stickers and extracting dates for validation.</p>
+              <div class="project-meta">
+                <span>YOLOv8</span>
+                <span>Python</span>
+                <span>CV</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="btn small">View Repo</a>
+                <a href="#" class="btn small outline">Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card reveal" tabindex="0">
+            <div class="project-media" style="background-image: linear-gradient(135deg, rgba(120,0,255,0.08), rgba(255,80,0,0.06));">
+              <div class="tag">2025</div>
+            </div>
+            <div class="project-body">
+              <h3>Leaf Disease Detection (MATLAB)</h3>
+              <p>Image segmentation and filtering pipeline to detect affected areas on leaves using MATLAB image processing tools.</p>
+              <div class="project-meta">
+                <span>MATLAB</span>
+                <span>Image Proc</span>
+                <span>Segmentation</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="btn small">View Report</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card reveal" tabindex="0">
+            <div class="project-media" style="background-image: linear-gradient(135deg, rgba(0,220,150,0.08), rgba(0,60,255,0.04));">
+              <div class="tag">2024</div>
+            </div>
+            <div class="project-body">
+              <h3>Portable Optical Turbidity Meter (Arduino)</h3>
+              <p>Mini device measuring water turbidity (NTU) with Arduino for quick field testing and display. Integrated into IDP 2024.</p>
+              <div class="project-meta">
+                <span>Arduino</span>
+                <span>Electronics</span>
+                <span>IDP</span>
+              </div>
+              <div class="project-actions">
+                <a href="#" class="btn small">Schematics</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME / CV -->
+    <section id="resume" class="section">
+      <div class="container">
+        <h2 class="section-title">Resume</h2>
+        <div class="resume-reveal reveal">
+          <p>Download the full PDF CV (complete education, experience, awards and references).</p>
+          <a class="btn primary" href="assets/Resume_MUHAMMAD_AMMAR_2025.pdf" download>Download Resume (PDF)</a>
+          <a class="btn outline" href="assets/Resume_MUHAMMAD_AMMAR_2025.pdf" target="_blank">Open in new tab</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-grid reveal">
+          <div class="contact-card card">
+            <h3>Let's talk</h3>
+            <p>Email me at <a href="mailto:ammarpauzan@gmail.com">ammarpauzan@gmail.com</a> or call <strong>+60-1139063634</strong>.</p>
+            <p>Available for internships and junior roles in embedded systems and computer vision.</p>
+          </div>
+
+          <div class="contact-card card">
+            <h3>Socials</h3>
+            <p><a href="#" id="linkedin-cta">LinkedIn</a> • <a href="https://github.com/mrammar2" target="_blank">GitHub</a></p>
+            <h4>Quick message</h4>
+            <form class="contact-form" onsubmit="return handleContact(event)">
+              <input name="name" type="text" placeholder="Your name" required />
+              <input name="email" type="email" placeholder="Your email" required />
+              <textarea name="message" placeholder="Message" required></textarea>
+              <button class="btn primary" type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 2025 Muhammad Ammar • Built with ❤️ • <a href="https://mrammar2.github.io/portfolio/" target="_blank">Site</a></p>
+      </div>
+    </footer>
+  </main>
+
   <script src="script.js"></script>
 </body>
 </html>
