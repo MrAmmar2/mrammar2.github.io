@@ -259,6 +259,33 @@ a{color:inherit}
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* ==== HERO CARD FIX ==== */
+.hero-card {
+  max-width: 380px;
+  margin: 0 auto;
+  justify-self: center;
+  text-align: left;
+}
+
+.hero-text {
+  max-width: 550px;
+  justify-self: center;
+}
+
+@media (max-width: 980px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-card {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .hero-text {
+    max-width: 100%;
+  }
+}
+
 
 
 
