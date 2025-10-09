@@ -323,4 +323,30 @@ a{color:inherit}
   white-space: nowrap;     /* keeps text in one line per pill */
 }
 
+/* Profile photo */
+.hero-photo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-photo{
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 30px rgba(123, 123, 255, 0.3), 0 0 10px rgba(255, 106,136, 0.3)
+  object-fit: cover;
+  animation: floPhoo 4s ease-in-out infinite;
+}
 
+@ketframes floatPhoto {
+  0%, 100% {transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@media (max-widh: 980px) {
+  .hero-photo {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 20px;
+  }
+}
