@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>C++ Playground</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">C++ Playground</h2>
+    <p class="section-lead">
+      Interactive C++ demo running directly in your browser using WebAssembly.
+    </p>
+
+    <div class="card">
+      <label>Number of orders:</label>
+      <input type="number" id="orderCount" value="5" min="1" max="20" />
+
+      <button class="btn primary" onclick="runCpp()">Run C++ Code</button>
+
+      <pre id="output" style="margin-top:15px;"></pre>
+    </div>
+
+    <br>
+    <a href="index.html" class="btn outline">← Back to Portfolio</a>
+  </div>
+</section>
+
+<script src="assets/wasm/cpp.js"></script>
+<script>
+  let ModuleReady = null;
+
+  CPPModule().then(m => {
+    ModuleReady = m;
+  });
+
+  function runCpp() {
+    if (!ModuleReady) {
+      document.getElementById("output").textContent = "Loading C++ module...";
+      return;
+    }
+
+    const n = parseInt(document.getElementById("orderCount").value);
+    const result = ModuleReady.ccall(
+      "run_example",
+      "string",
+      ["number"],
+      [n]
+    );
+
+    document.getElementById("output").textContent = result;
+  }
+</script>
+
+</body>
+</html>
